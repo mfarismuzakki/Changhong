@@ -11,7 +11,7 @@
     $conn = mysqli_connect($server, $user, $pass, $db);
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
     $email = $_POST['email'];
     $ponsel = $_POST['ponsel'];
 
