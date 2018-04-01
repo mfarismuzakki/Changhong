@@ -6,24 +6,12 @@
 		function construct(){
 			parrent::__construct();
 			$this->load->helper('url');
+			$this->load->model('Profile');
 		}
 
 
 		function index(){
 			$this->load->view('index');
 		}
-
-
-		function Register(){
-
-			$this->load->view('register');
-
-
-		}
-
-
 	}
-
-
-
  ?>

@@ -8,22 +8,22 @@
         <meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
         <meta name="keywords" content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
     
-    <link href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/law-icons/font/flaticon.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/law-icons/font/flaticon.css">
 
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/fontawesome/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slick.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slick-theme.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/fontawesome/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slick.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slick-theme.css">
 
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/helpers.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/landing-2.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/helpers.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url();?>assets/css/landing-2.css">
     </head>
     <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
@@ -55,24 +55,11 @@
         <br><br>
           <div class="row">
               <div class="col-md-offset-3 col-md-6">
-                <form action="<?php echo site_url('Register/Proses');?>" class="bg-white rounded pb_form_v1" method="post">
-                  <h2 class="mb-4 mt-0 text-center">Register</h2>
-                  <div class="form-group">
-                    <input type="text" class="form-control pb_height-50 reverse" name="username" placeholder="username" required="">
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control pb_height-50 reverse" name="email" placeholder="email" required="">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control pb_height-50 reverse" name="password" placeholder="password" required="" onkeyup='check();'>
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control pb_height-50 reverse" name="password2" placeholder="re-password" required="" onkeyup='check();'>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Login" name="submit">
-                  </div>
-                </form>
+                <div class="jumbotron">
+                  <p align="center">Register is Success <br> Check your email for confirmation</p>
+                  <br>
+                  <a href="<?php echo site_url('HomePage');?>" class="btn btn-primary">Back to home</a>
+                </div>
               </div>
           </div> 
         </div>

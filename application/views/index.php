@@ -56,7 +56,7 @@
             <h2 class="heading mb-3">Disscussion Make You Smart</h2>
             <div class="sub-heading">
               <p class="mb-4">Join with us. You will see the deferent of word</p>
-              <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="<?php echo site_url('HomePage/Register');?>"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">Register</span></a></p>
+              <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="<?php echo site_url('Register');?>"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">Register</span></a></p>
             </div>
           </div> 
           <div class="col-md-1">
@@ -525,7 +525,7 @@
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <p class="pb_font-14">&copy; 2018 Changhong Forum Disscussion. <br> Designed UI Cookies &amp; Developed by </a> <small>(Jihad Nur Shibgatullah & Muhammad Faris Muzakki)</small></p>
+            <p class="pb_font-14">&copy; 2018 Changhong Forum Disscussion. <br> Template by UI Cookies &amp; Developed by </a> <small>(Jihad Nur Shibgatullah & Muhammad Faris Muzakki)</small></p>
           </div>
         </div>
       </div>
