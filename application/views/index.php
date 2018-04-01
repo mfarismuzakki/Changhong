@@ -63,7 +63,7 @@
           </div>
           <div class="col-md-5 relative align-self-center">
             
-            <form action="#" class="bg-white rounded pb_form_v1" method="post">
+            <form action="<?php echo site_url('HomePage/Login');?>" class="bg-white rounded pb_form_v1" method="post">
               <h2 class="mb-4 mt-0 text-center">Login</h2>
               <div class="form-group">
                 <input type="text" class="form-control pb_height-50 reverse" name="username" placeholder="username" required="">

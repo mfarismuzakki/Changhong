@@ -56,7 +56,7 @@
           <div class="row">
               <div class="col-md-offset-3 col-md-6">
                 <div class="jumbotron">
-                  <p align="center">Register is Success <br> Check your email for confirmation</p>
+                  <p align="center">Register is Successed <br> Check your email for confirmation</p>
                   <br>
                   <a href="<?php echo site_url('HomePage');?>" class="btn btn-primary">Back to home</a>
                 </div>

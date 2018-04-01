@@ -34,5 +34,20 @@
 			$this->db->delete('akun');
 		}
 
+		function cekUsername($username){
+			$this->db->distinct('*');
+			$this->db->where('username',$username);
+			$this->db->from('akun');
+			return $this->db->get();
+		}
+
+		function getPassword($username){
+			$this->db->distinct('password');
+			$this->db->where('username',$username);
+			$this->db->from('akun');
+			return $this->db->get();
+		}
+
+
 	}
  ?>
