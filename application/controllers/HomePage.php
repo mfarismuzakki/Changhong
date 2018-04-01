@@ -16,7 +16,7 @@
 
 		function Register(){
 
-			
+			$this->load->view('register');
 
 
 		}

@@ -29,11 +29,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.php">Changhong</a>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="<?php echo site_url('HomePage/index')?>">Changhong</a>
+        <!-- <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
-        </button>
-        <div class="collapse navbar-collapse" id="probootstrap-navbar">
+        </button> -->
+        <!-- <div class="collapse navbar-collapse" id="probootstrap-navbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-features">Features</a></li>
@@ -42,7 +42,7 @@
             <li class="nav-item"><a class="nav-link" href="#section-faq">FAQ</a></li>
             <li class="nav-item cta-btn ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0"><a class="nav-link" href="#" target="_blank"><span class="pb_rounded-4 px-4">Get Started</span></a></li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </nav>
     <!-- END nav -->
@@ -56,7 +56,7 @@
             <h2 class="heading mb-3">Disscussion Make You Smart</h2>
             <div class="sub-heading">
               <p class="mb-4">Join with us. You will see the deferent of word</p>
-              <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#"><span class="pb_font-14 text-uppercase pb_letter-spacing-1" data-toggle="modal" data-target=".login-register-form">Register</span></a></p>
+              <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="<?php echo site_url('HomePage/Register');?>"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">Register</span></a></p>
             </div>
           </div> 
           <div class="col-md-1">
@@ -69,7 +69,7 @@
                 <input type="text" class="form-control pb_height-50 reverse" name="username" placeholder="username" required="">
               </div>
               <div class="form-group">
-                <input type="email" class="form-control pb_height-50 reverse" name="password" placeholder="password" required="">
+                <input type="password" class="form-control pb_height-50 reverse" name="password" placeholder="password" required="">
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Login">
@@ -81,62 +81,6 @@
       </div>
     </section>
     <!-- END section -->
-
-    <!-- POPUP LOGIN -->
-    <!-- Login / Register Modal-->
-    <div class="modal fade login-register-form" role="dialog">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                        <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
-                    </ul>
-                </div>
-                <div class="modal-body">
-                    <div class="tab-content">
-                        <div id="login-form" class="tab-pane fade in active">
-                            <form action="/">
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="remember"> Remember me</label>
-                                </div>
-                                <button type="submit" class="btn btn-default">Login</button>
-                            </form>
-                        </div>
-                        <div id="registration-form" class="tab-pane fade">
-                            <form action="/">
-                                <div class="form-group">
-                                    <label for="name">Your Name:</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="newemail">Email:</label>
-                                    <input type="email" class="form-control" id="newemail" placeholder="Enter new email" name="newemail">
-                                </div>
-                                <div class="form-group">
-                                    <label for="newpwd">Password:</label>
-                                    <input type="password" class="form-control" id="newpwd" placeholder="New password" name="newpwd">
-                                </div>
-                                <button type="submit" class="btn btn-default">Register</button>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- <section class="pb_section bg-light pb_slant-white pb_pb-250" id="section-features">
       <div class="container">
