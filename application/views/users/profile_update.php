@@ -81,7 +81,7 @@
                       <input type="text" class="form-control" value="<?php echo $user->fullname; ?>" required="" placeholder="username" id="user" name="fullname">
                       <!-- <p><i class="fa fa-map-marker" aria-hidden="true"></i> New Jersey, USA.</p> -->
                       <hr>
-                      <input type="text" class="form-control" name="biodata" placeholder="biodata" value="<?php echo $user->biodata; ?>">
+                      <input type="text" class="form-control" name="biodata" placeholder="biodata" value="<?php echo $user->biodata; ?>" id="user">
                       <hr>
                       <input type="submit" name="submit" value="Change" class="btn btn-success">
                     </form>

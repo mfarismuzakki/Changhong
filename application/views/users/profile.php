@@ -26,9 +26,11 @@
       font-size:23px;
       padding: 0px 5px;
     }
-    input { 
-    text-align: center; 
+
+    #in{
+      text-align: center; 
     }
+
   </style>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -73,12 +75,12 @@
             <div class="row user-detail">
                 <div class="col-lg-12 col-sm-12 col-12">   
                     <img src="<?php echo $user->foto; ?>" class="rounded-circle img-thumbnail"><br>
-                    <h5><?php echo $user->fullname ?></h5>
+                    <h5 align="center"><?php echo $user->fullname ?></h5>
                     <!-- <p><i class="fa fa-map-marker" aria-hidden="true"></i> New Jersey, USA.</p> -->
 
                     <hr>
 
-                    <h6><?php echo $user->biodata;?></h6>
+                    <h6 align="center"><?php echo $user->biodata;?></h6>
 
 
                     <hr>
