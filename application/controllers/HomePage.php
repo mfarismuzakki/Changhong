@@ -11,7 +11,8 @@
 
 
 		function index(){
-			$this->load->view('index');
+			$this->load->view('load_bootstrap/css');
+			$this->load->view('front/index');
 		}
 
 		function Login(){
@@ -23,7 +24,9 @@
 			if($this->Profile->cekUsername($data['username'])->num_rows() != 0) {
 				$pass = $this->Profile->getPassword($data['username'])->row();
 				if(password_verify($data['password'],$pass->password)) {
-					$this->load->view('home');
+					$this->load->view('load_bootstrap/css');
+					$this->load->view('users/home');
+					$this->load->view('template/footer');
 				}else{
 					// redirect(site_url('HomePage'));
 					// echo print_r($this->Profile->getPassword($data['username'])->result());

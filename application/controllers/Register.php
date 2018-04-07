@@ -11,7 +11,8 @@
 
 
 		function index(){
-			$this->load->view('register');
+			$this->load->view('load_bootstrap/css');
+			$this->load->view('front/register');
 		}
 
 		function Proses(){
@@ -23,7 +24,8 @@
 
 			$this->Profile->insertAkun($data);
 
-			$this->load->view('register_success');
+			$this->load->view('load_bootstrap/css');
+			$this->load->view('front/register_success');
 			// redirect(site_url('HomePage'));
 
 		}

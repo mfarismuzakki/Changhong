@@ -47,7 +47,5 @@
 			$this->db->from('akun');
 			return $this->db->get();
 		}
-
-
 	}
  ?>
