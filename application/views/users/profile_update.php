@@ -92,13 +92,13 @@
 
                 </div>
             </div>
-            <div class="row user-social-detail">
+           <!--  <div class="row user-social-detail">
                 <div class="col-lg-12 col-sm-12 col-12">
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </div>
-            </div>
+            </div> -->
         </div>
       </div>
     </div>

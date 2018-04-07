@@ -11,29 +11,37 @@
 
 
 		function index(){
-			$this->load->view('load_bootstrap/css');
-			$this->load->view('users/home');
-			$this->load->view('template/footer');
+			if($this->session->loged_in){
+				$this->load->view('load_bootstrap/css');
+				$this->load->view('users/home');
+				$this->load->view('template/footer');
+			}else{
+				redirect('HomePage');
+			}
 		}
 
 		function Profile(){
-			$this->load->model('Profile');
-
-			$data['user'] = $this->Profile->selectByCode($this->session->userdata('id_akun')->id_akun)->row();
-
-			$this->load->view('load_bootstrap/css');
-			$this->load->view('users/profile',$data);
-			$this->load->view('template/footer');
+			if($this->session->loged_in){
+				$this->load->model('Profile');
+				$data['user'] = $this->Profile->selectByCode($this->session->userdata('id_akun')->id_akun)->row();
+				$this->load->view('load_bootstrap/css');
+				$this->load->view('users/profile',$data);
+				$this->load->view('template/footer');
+			}else{
+				redirect('HomePage');
+			}
 		}
 
 		function UpdateData(){
-			$this->load->model('Profile');
-
-			$data['user'] = $this->Profile->selectByCode($this->session->userdata('id_akun')->id_akun)->row();
-
-			$this->load->view('load_bootstrap/css');
-			$this->load->view('users/profile_update',$data);
-			$this->load->view('template/footer');
+			if($this->session->loged_in){
+				$this->load->model('Profile');
+				$data['user'] = $this->Profile->selectByCode($this->session->userdata('id_akun')->id_akun)->row();
+				$this->load->view('load_bootstrap/css');
+				$this->load->view('users/profile_update',$data);
+				$this->load->view('template/footer');
+			}else{
+				redirect('HomePage');
+			}
 		}
 	
 		function ProsesUpdateData(){
@@ -71,6 +79,11 @@
 
 		}
 
+		function LogOut(){
+			$this->session->sess_destroy();
+			redirect('HomePage');	
+
+		}
 
 	}
 	

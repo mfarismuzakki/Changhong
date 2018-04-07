@@ -59,8 +59,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        <a href="<?php echo site_url('HomeUser/LogOut');?>" class="btn btn-secondary my-2 my-sm-0">LogOut</a>
       </form>
     </div>
   </nav>
@@ -88,13 +87,13 @@
                     <!-- <a href="#" class="btn btn-info btn-sm">lorem</a> -->
                 </div>
             </div>
-            <div class="row user-social-detail">
+            <!-- <div class="row user-social-detail">
                 <div class="col-lg-12 col-sm-12 col-12">
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </div>
-            </div>
+            </div> -->
         </div>
       </div>
     </div>

@@ -11,15 +11,19 @@
 
 
 		function index(){
-			$this->load->view('load_bootstrap/css');
-			$this->load->view('front/index');
+			if($this->session->userdata('loged_in')){
+				redirect('HomeUser');
+			}else{
+				$this->load->view('load_bootstrap/css');
+				$this->load->view('front/index');
+			}
 		}
 
 		function Login(){
 
 			$this->load->model('Profile');
 			$data['username'] = $this->input->post('username');
-			 $data['password'] = $this->input->post('password');
+			$data['password'] = $this->input->post('password');
 
 			 if($this->Profile->cekUsername($data['username'])->num_rows() != 0) {
 			 	$pass = $this->Profile->getPassword($data['username'])->row();
@@ -39,11 +43,7 @@
 		 			 $this->session->password = $data['password'];
 		 			 $this->session->password = $data['password'];
 
-
-
-		 			$this->load->view('load_bootstrap/css');
-		 			$this->load->view('users/home');
-		 			$this->load->view('template/footer');
+		 			redirect('HomeUser');
 		 		}else{
 		 			 redirect(site_url('HomePage'));
 		 			 echo print_r($this->Profile->getPassword($data['username'])->result());
