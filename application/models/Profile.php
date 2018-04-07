@@ -17,7 +17,7 @@
 			return $this->db->get();
 		}
 
-		function selectByKode($id_akun){
+		function selectByCode($id_akun){
 			$this->db->select('*');
 			$this->db->from('akun');
 			$this->db->where('id_akun',$id_akun);
@@ -43,6 +43,13 @@
 
 		function getPassword($username){
 			$this->db->distinct('password');
+			$this->db->where('username',$username);
+			$this->db->from('akun');
+			return $this->db->get();
+		}
+
+		function getIdAkun($username){
+			$this->db->select('id_akun');
 			$this->db->where('username',$username);
 			$this->db->from('akun');
 			return $this->db->get();

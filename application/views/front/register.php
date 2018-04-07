@@ -3,7 +3,7 @@
     </head>
     <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
 
-    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light">
       <div class="container">
         <a class="navbar-brand" href="<?php echo site_url('HomePage/index')?>">Changhong</a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +25,10 @@
 
 
 
-    <section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light" >
+    <div class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity pb_gradient_v1 pb_slant-light">
       <div class="container">
         <br><br>
-        <br><br>
+        <br>
           <div class="row">
               <div class="col-md-offset-3 col-md-6">
                 <form action="<?php echo site_url('Register/Proses');?>" class="bg-white rounded pb_form_v1" method="post">
@@ -46,14 +46,14 @@
                     <input type="password" class="form-control pb_height-50 reverse" name="password2" placeholder="re-password" required="" onkeyup='check();'>
                   </div>
                   <div class="form-group">
-                    <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Login" name="submit">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill btn-shadow-blue" value="Register" name="submit">
                   </div>
                 </form>
               </div>
           </div> 
         </div>
       </div>
-    </section>
+    </div>
     <!-- END section -->
 
 

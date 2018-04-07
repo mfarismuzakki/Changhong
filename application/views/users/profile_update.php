@@ -26,9 +26,10 @@
       font-size:23px;
       padding: 0px 5px;
     }
-    input { 
-    text-align: center; 
+    #user{ 
+      text-align: center; 
     }
+
   </style>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -72,18 +73,23 @@
             </div>
             <div class="row user-detail">
                 <div class="col-lg-12 col-sm-12 col-12">   
-                    <img src="<?php echo $user->foto; ?>" class="rounded-circle img-thumbnail"><br>
-                    <h5><?php echo $user->fullname ?></h5>
-                    <!-- <p><i class="fa fa-map-marker" aria-hidden="true"></i> New Jersey, USA.</p> -->
+                    
+                    <?php echo form_open_multipart('HomeUser/prosesUpdateData');?>
+                      <!-- <input type="file" id="pic" name="foto" style="display:none" onchange="document.getElementById('filename').value=this.value" accept="image/*">
+                      <input type="button" value="Select Picture" onclick="document.getElementById('pic').click()" class="btn btn-default btn-circle"><br><br> -->
+                      <input type="file" name="foto" accept="image/*" class="form-control"><br><br>
+                      <input type="text" class="form-control" value="<?php echo $user->fullname; ?>" required="" placeholder="username" id="user" name="fullname">
+                      <!-- <p><i class="fa fa-map-marker" aria-hidden="true"></i> New Jersey, USA.</p> -->
+                      <hr>
+                      <input type="text" class="form-control" name="biodata" placeholder="biodata" value="<?php echo $user->biodata; ?>">
+                      <hr>
+                      <input type="submit" name="submit" value="Change" class="btn btn-success">
+                    </form>
 
-                    <hr>
-
-                    <h6><?php echo $user->biodata;?></h6>
 
 
-                    <hr>
-                    <a href="<?php echo site_url('HomeUser/UpdateData')?>" class="btn btn-success btn-sm">Change</a>
-                    <!-- <a href="#" class="btn btn-info btn-sm">lorem</a> -->
+
+
                 </div>
             </div>
             <div class="row user-social-detail">
