@@ -1,3 +1,9 @@
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		#inputfield{
+			height: 100px;
+		}
+	</style>
 	<title>Home</title>
 </head>
 <body>
@@ -28,4 +34,36 @@
 	    </form>
 	  </div>
 	</nav>
+
+
+	<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="offset-md-4 col-md-4">
+					<form class="form-group" method="post" action="<?php echo site_url('HomeUser/AddThread'); ?>">
+						<input type="text" name="title" class="form-control" placeholder="title"><br>
+						<input type="text" name="content" class="form-control" placeholder="Content" id="inputfield"><br>
+						<center>
+							<input type="submit" name="submit" value="create" class="btn btn-primary">
+						</center>
+					</form>			
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php foreach($data as $var){?>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="offset-md-4 col-md-4">
+					<center>
+						<h3><?php echo $var->title; ?></h3>
+						<h5><?php echo $var->content; ?></h5>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
 

@@ -77,7 +77,7 @@
                     <?php echo form_open_multipart('HomeUser/prosesUpdateData');?>
                       <!-- <input type="file" id="pic" name="foto" style="display:none" onchange="document.getElementById('filename').value=this.value" accept="image/*">
                       <input type="button" value="Select Picture" onclick="document.getElementById('pic').click()" class="btn btn-default btn-circle"><br><br> -->
-                      <input type="file" name="foto" accept="image/*" class="form-control"><br><br>
+                      <input type="file" name="foto" accept="image/*" class="form-control-file"><br><br>
                       <input type="text" class="form-control" value="<?php echo $user->fullname; ?>" required="" placeholder="username" id="user" name="fullname">
                       <!-- <p><i class="fa fa-map-marker" aria-hidden="true"></i> New Jersey, USA.</p> -->
                       <hr>

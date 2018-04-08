@@ -12,8 +12,10 @@
 
 		function index(){
 			if($this->session->loged_in){
+				$this->load->model('Thread');
+				$user['data'] = $this->Thread->selectByCode($this->session->id_akun->id_akun)->result(); 
 				$this->load->view('load_bootstrap/css');
-				$this->load->view('users/home');
+				$this->load->view('users/home',$user);
 				$this->load->view('template/footer');
 			}else{
 				redirect('HomePage');
@@ -48,11 +50,12 @@
 			$this->load->model('Profile');
 			$this->load->helper("file");
 			
-			$path = 'Foto/'.$this->session->username;
-			delete_files($path);
 
 			if(!is_dir('Foto/'.$this->session->username)){
 				mkdir('./Foto/'.$this->session->username,0777,TRUE);
+			}else{
+				$path = 'Foto/'.$this->session->username;
+				delete_files($path);
 			}
 
 			$config['upload_path'] = './Foto/'.$this->session->username;
@@ -66,10 +69,9 @@
             $this->upload->do_upload('foto');
 
             
-
 			$data['fullname'] = $this->input->post('fullname');
 			$data['biodata'] = $this->input->post('biodata');
-			$data['foto'] = base_url().'Foto/'.$this->session->username.'/foto_'.$this->session->username.'.jpg';
+			$data['foto'] = base_url().'Foto/'.$this->session->username.'/'.$this->upload->data('file_name');
 
 			
 			$this->Profile->updateAkun($this->session->userdata('id_akun')->id_akun,$data);	
@@ -84,6 +86,24 @@
 			redirect('HomePage');	
 
 		}
+
+		function AddThread(){
+				
+			$this->load->model('Thread');
+
+			$date = date_create();
+			$time = date('Y-m-d H:i:s');
+
+
+			$data['title'] = $this->input->post('title');
+			$data['content'] = $this->input->post('content');
+			$data['owner'] = $this->session->id_akun->id_akun;
+			$data['timeupload'] = $time;
+			$this->Thread->InsertThread($data);
+
+			redirect('HomeUser');
+		}
+
 
 	}
 	

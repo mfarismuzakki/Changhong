@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
         <link rel="shortcut icon" href="<?php echo base_url();?>Image/lambang.jpg"/>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
         <meta name="keywords" content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
         <link href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
